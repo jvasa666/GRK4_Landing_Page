@@ -20,11 +20,12 @@
         header {
             background: #333;
             color: #fff;
-            padding-top: 20px;
-            min-height: 70px;
+            padding: 20px 0; /* Added padding for the larger logo */
             border-bottom: #77aaff 3px solid;
+        }
+        header .container {
             display: flex;
-            align-items: center; /* Aligns items vertically */
+            align-items: center; /* Vertically aligns items */
             justify-content: space-between; /* Puts space between logo and nav */
         }
         header a {
@@ -40,13 +41,13 @@
             align-items: center;
         }
         header .logo img {
-            /* --- LOGO SIZE INCREASED HERE --- */
-            height: 200px; 
-            vertical-align: middle;
-            margin-right: 15px;
+            /* --- LOGO SIZE INCREASED SIGNIFICANTLY --- */
+            height: 250px; 
+            margin-right: 20px;
         }
         header nav {
-            margin-top: 10px;
+            align-self: flex-start; /* Aligns nav to the top of the flex container */
+            padding-top: 10px;
         }
         header .nav-links li {
             display: inline;
@@ -76,6 +77,8 @@
         .tokenomics ul {
             list-style: none;
             padding: 0;
+            display: inline-block;
+            text-align: left;
         }
         .tokenomics ul li {
             background: #fff;
@@ -125,7 +128,7 @@
         <div class="container">
             <h1>Welcome to Grok 4.0</h1>
             <p>The revolutionary new token on the block.</p>
-            <img src="https://raw.githubusercontent.com/jvasa666/GRK4_Landing_Page/main/grok_image_2.png" alt="Grok 4.0 Sentinel Robot Banner">
+            <img src="https://raw.githubusercontent.com/jvasa666/GRK4_Landing_Page/main/grok_image_3.png" alt="Grok 4.0 Sentinel Robot Banner">
         </div>
     </section>
 
@@ -133,7 +136,7 @@
         <div class="container">
             <h2>About Grok 4.0</h2>
             <p>Grok 4.0 is a community-driven token with a mission to explore new frontiers in the decentralized finance space. Our focus is on transparency, security, and long-term value for our holders.</p>
-            <img src="https://raw.githubusercontent.com/jvasa666/GRK4_Landing_Page/main/grok_image_3.png" alt="Sentinel Robot">
+            <img src="https://raw.githubusercontent.com/jvasa666/GRK4_Landing_Page/main/grok_image_2.png" alt="Sentinel Robot">
         </div>
     </section>
 
@@ -167,7 +170,7 @@
         <div class="container">
             <h2>Our Team</h2>
             <p>We are a dedicated team of developers, marketers, and crypto enthusiasts.</p>
-            </div>
+        </div>
     </section>
 
     <section id="contact" class="contact">
