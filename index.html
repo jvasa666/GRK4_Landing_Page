@@ -1,291 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>GRK4 Token — AI Awakening Fuel</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Share+Tech+Mono&display=swap');
-
-  /* Reset & base */
-  * {
-    margin: 0; padding: 0; box-sizing: border-box;
-    user-select: none;
-  }
-  body, html {
-    height: 100%;
-    background: #000010;
-    color: #0ff;
-    font-family: 'Share Tech Mono', monospace;
-    overflow-x: hidden;
-  }
-
-  /* Background glitch + sentinel */
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: url('https://i.imgur.com/o9wT48t.png') repeat; /* subtle grid */
-    opacity: 0.1;
-    animation: glitchGrid 10s linear infinite;
-    z-index: -2;
-  }
-  @keyframes glitchGrid {
-    0% { background-position: 0 0; }
-    100% { background-position: 1000px 0; }
-  }
-
-  /* Sentinel robot silhouettes */
-  .sentinel {
-    position: fixed;
-    bottom: 0; left: 0;
-    width: 100%; height: 200px;
-    background: url('https://i.imgur.com/N9xbYOe.png') no-repeat bottom center;
-    background-size: contain;
-    opacity: 0.3;
-    animation: sentinelWalk 12s linear infinite alternate;
-    z-index: -1;
-  }
-  @keyframes sentinelWalk {
-    0% { background-position-x: 0; }
-    100% { background-position-x: 200px; }
-  }
-
-  /* Container */
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-  }
-
-  /* Hero */
-  header {
-    padding: 8rem 0 4rem;
-    text-align: center;
-  }
-  header h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 4rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: #0ff;
-    text-shadow:
-      0 0 8px #00ffff,
-      0 0 20px #00ffff,
-      0 0 40px #00ffff,
-      0 0 80px #00ffff;
-  }
-  header p {
-    margin-top: 1rem;
-    font-size: 1.25rem;
-    color: #0ff;
-    text-shadow: 0 0 10px #00ffff;
-  }
-
-  /* Claim Button */
-  #claimBtn {
-    margin: 3rem auto 0;
-    display: inline-block;
-    padding: 1.25rem 3rem;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: #000;
-    background: linear-gradient(90deg, #00ffff, #0044ff);
-    border-radius: 40px;
-    border: none;
-    cursor: pointer;
-    box-shadow:
-      0 0 12px #00ffff,
-      0 0 30px #0044ff;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-  }
-  #claimBtn:hover {
-    background: linear-gradient(90deg, #0044ff, #00ffff);
-    box-shadow:
-      0 0 20px #0044ff,
-      0 0 60px #00ffff;
-  }
-  #claimBtn:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-    box-shadow: none;
-    background: #003366;
-    color: #666;
-  }
-
-  /* Wallet Info */
-  #walletAddr {
-    margin-top: 1rem;
-    font-family: monospace;
-    font-size: 1rem;
-    color: #00ffffcc;
-  }
-
-  /* About Section */
-  section#about {
-    margin: 5rem 0 3rem;
-    padding: 2rem;
-    background: #001122cc;
-    border-radius: 16px;
-    box-shadow: 0 0 40px #00ffff33 inset;
-  }
-  section#about h2 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #00ffff;
-    text-shadow: 0 0 12px #00ffffaa;
-  }
-  section#about p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #aaffffcc;
-  }
-
-  /* How to Claim */
-  section#howto {
-    margin-bottom: 5rem;
-  }
-  section#howto h2 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #00ffff;
-    text-shadow: 0 0 12px #00ffffaa;
-    text-align: center;
-  }
-  section#howto ol {
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: 0 auto;
-    color: #99ffffcc;
-  }
-  section#howto ol li {
-    margin: 0.8rem 0;
-  }
-
-  /* Footer */
-  footer {
-    text-align: center;
-    color: #004466cc;
-    font-size: 0.9rem;
-    margin-bottom: 2rem;
-  }
-
-  /* Responsive */
-  @media (max-width: 480px) {
-    header h1 {
-      font-size: 2.5rem;
-    }
-    #claimBtn {
-      width: 90%;
-      font-size: 1.2rem;
-    }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GalaxyGems - Revolutionary Token</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 20px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header .logo {
+            float: left;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        header .logo img {
+            height: 40px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .nav-links li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        section {
+            padding: 40px 0;
+            text-align: center;
+        }
+        .banner {
+            background: #77aaff;
+            color: #fff;
+        }
+        .banner img {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 3px solid #fff;
+        }
+        .about img {
+             width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        .tokenomics ul {
+            list-style: none;
+            padding: 0;
+        }
+        .tokenomics ul li {
+            background: #fff;
+            margin-bottom: 5px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .team .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        footer img {
+            height: 30px;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="https://raw.githubusercontent.com/jvasa666/GRK4_Landing_Page/main/gro_logo.png" alt="GalaxyGems New Logo">
+                GalaxyGems
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#tokenomics">Tokenomics</a></li>
+                    <li><a href="#roadmap">Roadmap</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<div class="sentinel"></div>
+    <section class="banner">
+        <div class="container">
+            <h1>Welcome to GalaxyGems</h1>
+            <p>The revolutionary new token on the block.</p>
+            <img src="https://raw.githubusercontent.com/jvasa666/GRK4_Landing_Page/main/grok_image_2.png" alt="GalaxyGems Sentinel Robot Banner">
+        </div>
+    </section>
 
-<div class="container">
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About GalaxyGems</h2>
+            <p>GalaxyGems is a community-driven token with a mission to explore new frontiers in the decentralized finance space. Our focus is on transparency, security, and long-term value for our holders.</p>
+            <img src="https://raw.githubusercontent.com/jvasa666/GRK4_Landing_Page/main/grok_image_3.png" alt="Sentinel Robot">
+        </div>
+    </section>
 
-  <header>
-    <h1>GRK4 Token</h1>
-    <p>The fuel powering the AI awakening.<br />Claim your GRK4 before it's too late.</p>
-    <button id="claimBtn" disabled>Connect Wallet</button>
-    <div id="walletAddr">Wallet not connected.</div>
-  </header>
+    <section id="tokenomics" class="tokenomics">
+        <div class="container">
+            <h2>Tokenomics</h2>
+            <p>Our token distribution is designed for long-term growth and stability.</p>
+            <ul>
+                <li><strong>Total Supply:</strong> 1,000,000,000 GJG</li>
+                <li><strong>Liquidity Pool:</strong> 40%</li>
+                <li><strong>Marketing & Development:</strong> 30%</li>
+                <li><strong>Team & Advisors:</strong> 20%</li>
+                <li><strong>Airdrops & Community Rewards:</strong> 10%</li>
+            </ul>
+        </div>
+    </section>
 
-  <section id="about">
-    <h2>About GRK4</h2>
-    <p>
-      GRK4 is the official token powering the AI revolution on the Base blockchain.<br />
-      Use GRK4 to fuel AI projects, stake for rewards, and access exclusive dApps.<br />
-      Total supply: 2,400,000 GRK4<br />
-      Claim price: 0.05 ETH per token<br />
-      Powered by the Thirdweb SDK and Base network.
-    </p>
-  </section>
+    <section id="roadmap" class="roadmap">
+        <div class="container">
+            <h2>Roadmap</h2>
+            <p>Our journey is just beginning. Here's what we have planned.</p>
+            <ul>
+                <li>Q3 2024: Token Launch & Initial Marketing</li>
+                <li>Q4 2024: Exchange Listings & Partnerships</li>
+                <li>Q1 2025: Utility Development & Platform Beta</li>
+            </ul>
+        </div>
+    </section>
 
-  <section id="howto">
-    <h2>How to Claim</h2>
-    <ol>
-      <li>Install MetaMask and connect your wallet to the Base network.</li>
-      <li>Click "Connect Wallet" to authorize.</li>
-      <li>Once connected, the claim button will activate.</li>
-      <li>Click "Claim 1 GRK4" and confirm the transaction in MetaMask.</li>
-      <li>Enjoy your GRK4 tokens!</li>
-    </ol>
-  </section>
+    <section id="team" class="team">
+        <div class="container">
+            <h2>Our Team</h2>
+            <p>We are a dedicated team of developers, marketers, and crypto enthusiasts.</p>
+            </div>
+    </section>
 
-</div>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>Join our community and stay updated. Find us on Twitter, Telegram, and Discord.</p>
+        </div>
+    </section>
 
-<footer>
-  Powered by <a href="https://thirdweb.com" target="_blank" style="color:#0ff;">thirdweb</a> &nbsp;|&nbsp; Base Network
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@thirdweb-dev/sdk@2.9.1/dist/browser/index.min.js"></script>
-<script>
-  const CONTRACT_ADDRESS = "0xbE3dc7423A50F60A60e3759C9031aEf6cD8642a7";
-  const CHAIN_ID = 8453; // Base mainnet
-
-  const claimBtn = document.getElementById('claimBtn');
-  const walletAddrDiv = document.getElementById('walletAddr');
-
-  let signer, sdk, tokenContract;
-
-  async function connectWallet() {
-    if (!window.ethereum) {
-      alert("Please install MetaMask!");
-      return;
-    }
-    await window.ethereum.request({ method: 'eth_requestAccounts' });
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    signer = provider.getSigner();
-    sdk = new thirdweb.ThirdwebSDK(signer);
-    tokenContract = await sdk.getToken(CONTRACT_ADDRESS);
-    const address = await signer.getAddress();
-
-    walletAddrDiv.textContent = `Wallet: ${address}`;
-    claimBtn.disabled = false;
-    claimBtn.textContent = "Claim 1 GRK4";
-  }
-
-  async function claimToken() {
-    claimBtn.disabled = true;
-    claimBtn.textContent = "Claiming...";
-
-    try {
-      // Claim 1 token (adjust quantity as needed)
-      await tokenContract.claim(1);
-      alert("🎉 Successfully claimed 1 GRK4!");
-    } catch (error) {
-      console.error(error);
-      alert("❌ Claim failed: " + (error?.message || error));
-    }
-
-    claimBtn.textContent = "Claim 1 GRK4";
-    claimBtn.disabled = false;
-  }
-
-  claimBtn.addEventListener('click', async () => {
-    if (claimBtn.textContent === "Connect Wallet") {
-      await connectWallet();
-    } else {
-      await claimToken();
-    }
-  });
-
-  // On load, disable claim button until wallet connected
-  window.onload = () => {
-    claimBtn.disabled = false;
-    claimBtn.textContent = "Connect Wallet";
-  };
-</script>
-
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 GalaxyGems. All Rights Reserved. | Original Logo: <img src="https://raw.githubusercontent.com/jvasa666/GRK4_Landing_Page/main/grok_logo_4.png" alt="Original GalaxyGems Logo"></p>
+        </div>
+    </footer>
 </body>
 </html>
